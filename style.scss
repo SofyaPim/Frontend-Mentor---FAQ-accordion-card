@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// Primary Text
+
+
+$VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$SoftRed: hsl(14, 88%, 65%);
+// Neutral Text
+
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+
+//Dividers
+$LightGrayishBlue: hsl(240, 5%, 91%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+body {
+    background-color: hsl(0, 0, 94);
+}
+
+section {
+    margin: 2% auto;
+    max-width: 1440px;
+    height: 768px;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    position: relative;
+
+    .bg-pattern-mobile {
+        display: none;
+    }
+
+    .illustration-woman-online-mobile {
+        display: none;
+    }
+
+    .illustration-box {
+        position: absolute;
+        left: 9%;
+        top: 46%;
+
+    }
+
+
+    .white-card {
+        width: 916px;
+        height: 508px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 5px 25px 51px -17px $VeryDarkDesaturatedBlue;
+
+        &__img {
+            width: 50%;
+            position: relative;
+            overflow: hidden;
+
+            .bg-pattern {
+
+                position: absolute;
+                top: -57%;
+                left: -124%;
+            }
+
+            .illustration-woman-online {
+                position: absolute;
+                top: 17%;
+                left: -18%;
+            }
+
+
+        }
+
+        &__text {
+            width: 50%;
+            overflow: hidden;
+
+            h2 {
+                color: $VeryDarkDesaturatedBlue;
+                font-weight: 700;
+                margin-bottom: 43px;
+                margin-top: 68px;
+                font-size: 24px;
+            }
+
+        }
+    }
+}
+
+.faq-wrapper {
+    height: 80%;
+    color: $DarkGrayishBlue;
+    margin-right: 43px;
+    overflow: hidden;
+
+    .faq-quest {
+        display: flex;
+        justify-content: space-between;
+        line-height: 2;
+        color: $DarkGrayishBlue;
+        border-bottom: 1px solid $LightGrayishBlue;
+        padding-bottom: .5em;
+        padding-top: .5em;
+
+        &:hover {
+            color: $SoftRed;
+        }
+
+    }
+
+    .faq-quest.active-quest {
+        color: $VeryDarkDesaturatedBlue;
+    }
+
+    .faq-answer {
+        line-height: 1.5;
+    }
+
+
+    .faq-arrow {
+        width: 20px;
+        transform: rotate(180deg);
+
+        path {
+            fill: $SoftRed;
+        }
+    }
+
+
+}
+
+.displayNone {
+    display: none;
+
+}
+
+.transformRotate {
+    transform: rotate(180deg);
+}
+
+@media all and (max-width:870px) {
+    section {
+        // padding-bottom: 84px;
+        height: auto;
+
+        .white-card__mobile-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .illustration-box {
+            display: none;
+
+        }
+
+        .bg-pattern-mobile {
+            display: block;
+            // position: absolute;
+            // top: 33vw;
+            // left: 17vw;
+
+        }
+
+        .illustration-woman-online-mobile {
+            align-self: flex-end;
+            display: block;
+            position: absolute;
+            top: calc(100% - 210px);
+            left: calc(100% - 310px);
+
+        }
+
+        .white-card {
+            margin-top: 146px;
+             margin-bottom: 85px;
+             margin-left: 5%;
+             margin-right: 5%;
+           // width: 327px;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+
+
+            &__img {
+                display: none;
+
+
+            }
+
+            &__text {
+                width: 100%;
+                overflow: hidden;
+
+                h2 {
+
+                    margin-bottom: 43px;
+                 text-align: center;
+                    
+                }
+
+            }
+        }
+    }
+
+    .faq-wrapper {
+
+
+        margin: 5%;
+        padding-bottom: 5%;
+        overflow: hidden;
+
+        .faq-quest {
+            display: flex;
+            justify-content: space-between;
+            line-height: 2;
+            padding-bottom: .5em;
+            padding-top: .5em;
+        }
+    }
+}
+
+@media all and (max-width:375px) {
+    section {
+        // padding-bottom: 84px;
+        height: auto;
+
+        .white-card__mobile-img {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .illustration-box {
+            display: none;
+
+        }
+
+        .bg-pattern-mobile {
+            display: block;
+            
+
+        }
+
+        
+
+        .white-card {
+            margin-top: 146px;
+          
+            max-width: 327px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            &__text {
+                h2 {
+
+                 
+                    margin-top: 40px;
+                }
+
+            }
+        }
+    }
+
+   
+}
